@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.heading h1 {
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 19.36px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.tab-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab-btn svg {
+    color: #f0f0f0;
+}
+
+.tab-btn.active {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    width: calc(33.33% - 20px);
+    max-width: 300px;
+    height: auto;
+    position: relative;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 200px;
+    /* Adjusted height */
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+    /* Ensures images fill the container */
+}
+
+.product-card .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card .title-container {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.product-card .product-title {
+    font-family: 'Khula', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card .vendor-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.product-card .dot-radio {
+    display: none;
+}
+
+.product-card .dot {
+    width: 16px;
+    /* Increased size */
+    height: 16px;
+    /* Increased size */
+    border-radius: 50%;
+    background-color: #000;
+    margin-right: 5px;
+}
+
+.product-card .vendor {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px;
+    color: #777;
+    margin-left: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card .dot-radio:checked+.dot {
+    background-color: red;
+    /* Change color when radio button is checked */
+}
+
+.product-card .price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.product-card .price {
+    font-family: 'Khula', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin: 5px 0;
+}
+
+.product-card .compare-price {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px;
+    color: #777;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.product-card .discount {
+    font-family: 'Khula', sans-serif;
+    font-size: 12px;
+    color: red;
+    margin-left: 5px;
+}
+
+.product-card button {
+    font-family: 'Khula', sans-serif;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
